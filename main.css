@@ -1,0 +1,107 @@
+.information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1920px;
+    height: 160px;
+    border: 1px solid black;
+}
+
+.block {
+    width: 1234px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texts {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-family: 'DM Sans';
+    font-size: 18px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+}
+
+a:hover:before,
+a:hover:after {
+    width: 50%;
+}
+
+a:before{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    transition: width 0.3s;
+}
+
+a:after {
+    content:"";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    transition: width .3s;
+}
+
+.icon {
+    display: flex;
+}
+
+.register {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color:#F3FBF8;
+    display: flex;
+    align-items: center;
+    transition:  .3s ;
+    justify-content: center;
+    position: relative;
+}
+
+.register:hover {
+    background-color:#09A66D
+}
+
+.register svg {
+    stroke: #222;
+    transition:  .3s;
+}
+
+.register:hover svg {
+    stroke: #fff;
+}
+
+.picter {
+    display: flex;
+    gap: 20px;
+}
+
+.squar {
+    position:absolute;
+    right: 13px;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 100px;
+    background-color: #09A66D;
+    transition: .3s;
+}
+
+.register:hover .squar {
+    background-color: white;
+}
