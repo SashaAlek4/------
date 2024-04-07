@@ -1,3 +1,5 @@
+
+
 .information {
     display: flex;
     justify-content: center;
@@ -6,7 +8,12 @@
 }
 
 .block {
-    width: 1234px;
+    margin: 0 auto;
+    max-width: 1234px;
+    width: calc(100% - 60px);
+}
+
+.information .block {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -160,10 +167,17 @@ button:hover {
 }
 
 .second {
-    display: flex;
+    position: relative;
+    z-index: 5;
     margin-top: 52px;
-    align-items: center;
     background-color: #F3FBF8;
+}
+
+.second .block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -171,8 +185,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     margin-top: 90px;
-    height: 850px;
-    display: flex;
     align-items: center;
 }
 
@@ -224,8 +236,8 @@ button:hover {
 .pic {
     display: flex;
     position: absolute;
-    margin-top: 365px;
-    margin-right: 340px;
+    top:365px;
+    left:0px;
 }
 
 img {
@@ -235,7 +247,8 @@ img {
 .informational {
     display: flex;
     flex-direction: column;
-    margin-top: 348px;
+    align-self: flex-end;
+    /* margin-top: 348px; */
 }
 
 .ic {
@@ -340,6 +353,8 @@ img {
         background-color: #09A66D;
         border-radius:100px ;
         margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         align-items: center;
         justify-content: center;
         position: relative;
@@ -350,76 +365,31 @@ img {
         background-color: #adf3d9;
     }
     
-    .pic {
+    .pic img {
         display: flex;
     }
     
     img {
         width: 100px;
-        height: 100px;
+        height: 50px;
         display: flex;
     }
-    
-    .informational {
-        display: flex;
-    }
-    
-    .ic {
-        display: flex;
-        margin-left: 32px;
-        align-items: center;
-    }
-    
-    .users {
-        display: flex;
-    }
-    
-    .reviews {
-        display: flex;
-        margin-top: 26px;
-    }
-    
-    .items {
-        display: flex;
-        margin-top: 26px;
-    }
-    
-    .clock {
-        display: flex;
-        width:150px ;
-        height: 80px; ;
-        background-color: #fff;
-    }
-    
-    .opction {
-        font-family: 'DN Sans';
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
-    
-    .numbers {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 24px;
-        font-size: 28px;
-    }
+
 }
 
 .three {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items:center ;
+    position: relative;
 }
 
 .advantage {
     display: flex;
     flex-direction: column;
-    height: 826px;
-    border: 1px solid #222;
     margin-top: 90px;
+    position: relative  ;
 }
 
 .txt {
@@ -442,6 +412,7 @@ img {
 .opisanie {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     margin-top: 60px;
 }
 
@@ -449,18 +420,189 @@ img {
     display: flex;
     width:502px;
     height: 172px;
-    border: 1px solid black;
     justify-content: center;
     align-items: center;
+}
+
+.knopki:hover {
+    display: flex;
+    background-color: #F3FBF8;
+    width:502px;
+    height: 172px;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .3s;
+}
+
+.curier {
+    width: 100%;
+}
+
+.curier img {
+    width: 100%;
 }
 
 .jo {
     display: flex;
     height: 92px;
-    border: 1px solid black;
+    margin-left: 60px;
+}
+
+.ico {
+    display:flex ;
+
+    flex-direction: column;  
 }
 
 .t {
     display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    font-family: 'Raleway';
 }
+
+.k {
+    font-size: 20px;
+}
+
+.l {
+    font-size: 14px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.icow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #F3FBF8;
+    border-radius: 100px;
+    transition-duration: .3s;
+}
+
+.icow:hover {
+    background-color: #fff;
+    transition-duration: .4s;
+    transition-property: all;
+}
+
+.knopki svg {
+    fill: #09A66D;
+    transition-duration: .3s;
+}
+
+.knopki:hover svg {
+    fill: #09A66D;
+    transition-duration: .3s;
+}
+
+.icows {
+    position: absolute;
+    right:150px;
+    top:-30px;
+}
+
+@media (max-width:350px) {
+
+    .three {
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center ;
+        position: relative;
+    }
+    
+    .advantage {
+        display: flex;
+        flex-direction: column;
+        margin-top: 90px;
+        position: relative  ;
+    }
+
+    .txt {
+        font-size: 60px;
+    }
+
+    .pros {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .opisanie {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        margin-top: 60px;
+    }
+    
+    .knopki {
+        flex-direction: column;
+        display: flex;
+        width:170px;
+        height: 172px;
+        margin-bottom: 140px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .curier img {
+        display: flex;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .knopki:hover {
+        display: flex;
+        background-color: #F3FBF8;
+        width:502px;
+        height: 172px;
+        justify-content: center;
+        align-items: center;
+        transition-duration: .3s;
+    }
+}
+
+.four {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3FBF8;
+    height: 780px;
+}
+
+.discover {
+    display: flex;
+    height: 600px;
+    border: 1px solid black;
+}
+
+.dicerda {
+    display: flex;
+    height: 390px;
+}
+
+.itemsi {
+    display: flex;
+    flex-direction: column;
+}
+
+.zagolovok {
+    font-size: 70px;
+}
+
+.ygolovok {
+    margin-top: 24px;
+    color: #555555;
+}
+
+.holovok {
+    margin-top: 60px;
+}
+
+
+
 
